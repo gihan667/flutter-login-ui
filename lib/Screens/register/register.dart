@@ -80,11 +80,21 @@ class RegisterScreen extends StatelessWidget {
             Container(
               alignment: Alignment.centerRight,
               margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-              child: RaisedButton(
+              child: ElevatedButton(
                 onPressed: () {},
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
-                textColor: Colors.white,
-                padding: const EdgeInsets.all(0),
+                style: ButtonStyle(
+                  shape: WidgetStatePropertyAll(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(80.0),
+                    ),
+                  ),
+                  padding: const WidgetStatePropertyAll(
+                    EdgeInsets.zero,
+                  ),
+                  foregroundColor: const WidgetStatePropertyAll(
+                    Colors.white,
+                  ),
+                ),
                 child: Container(
                   alignment: Alignment.center,
                   height: 50.0,
